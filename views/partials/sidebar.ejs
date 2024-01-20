@@ -1,0 +1,29 @@
+<div class="sidebar" id="side_nav">
+  <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between text-center">
+    <h1 class="fs-4 "> <span class="text-white">Topics</span></h1>
+    <hr class="h-color mx-2">
+
+    <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="fa-solid fa-bars-staggered"></i></i></button>
+  </div>
+
+  <ul class="list-unstyled px-2">
+    <li>
+      <a href="/tasks?target=newTask" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+        <span><i class="fa-solid fa-pen"></i> New Task</span>
+      </a>
+    </li>
+    <li>
+      <a href="/tasks?target=tasks" class="text-decoration-none px-3 py-2 d-block d-flex justify-content-between">
+        <span><i class="fa-solid fa-bookmark"></i> Tasks</span>
+        <span class="bg-dark rounded-pill text-white py-0 px-2"><%= tasks.length %></span>
+      </a>
+    </li>
+    <!-- ... (repeat for other items) -->
+  </ul>
+  <hr class="h-color mx-2">
+
+  <ul class="list-unstyled px-2">
+    <li class=""><a href="/" class="text-decoration-none px-3 py-2 d-block"><i class="fa-solid fa-house"></i>
+        Home</a></li>
+  </ul>
+</div>
