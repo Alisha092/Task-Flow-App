@@ -14,22 +14,6 @@ $('.close-btn').on('click', function () {
 
 })
 
-function handleItemClick(element) {
-    const target = element.getAttribute('data-target');
-    switch (target) {
-        case 'newTask':
-            // Code to handle the 'New Task' item click
-
-            break;
-
-        case 'renderTasks':
-            // Code to handle the 'Render Tasks' item click
-            console.log('Render Tasks clicked');
-            console.dir(element)
-            break;
-    }
-    console.log('Clicked element with target:', target);
-}
 
 document.addEventListener('DOMContentLoaded', function () {
     const topicSelect = document.getElementById('topicSelect');

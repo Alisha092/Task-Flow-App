@@ -15,7 +15,7 @@ const userRoutes = require('./router/users')
 const taskRoutes = require('./router/tasks')
 
 
-mongoose.connect("mongodb://localhost:27017/TaskFlow");
+mongoose.connect("mongodb://root:xHWcbFxgewR8UY6Sjw6okAra@db-task-flow:27017/my-app?authSource=admin");
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", () => console.log("Database connected"));
@@ -55,7 +55,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.use(new GitHubStrategy({
     clientID: 'f935a4b1c88192959437',
     clientSecret: 'b852e327ae3b3c4ff91f7438ce6e53b9f3d1d279',
-    callbackURL: 'http://localhost:8080/auth/github/callback'
+    callbackURL: 'https://task-flow.liara.run/auth/github/callback'
 },
     async (accessToken, refreshToken, profile, done) => {
         try {
@@ -111,6 +111,6 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(8080, () => {
-    console.log('Port 8080');
+app.listen(3000, () => {
+    console.log('Port 3000');
 });
