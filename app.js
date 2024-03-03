@@ -15,7 +15,7 @@ const userRoutes = require('./router/users')
 const taskRoutes = require('./router/tasks')
 
 
-mongoose.connect("mongodb://root:xHWcbFxgewR8UY6Sjw6okAra@db-task-flow:27017/my-app?authSource=admin");
+mongoose.connect("mongodb://localhost:27017/TaskFlow");
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", () => console.log("Database connected"));
